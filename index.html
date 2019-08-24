@@ -22,8 +22,14 @@
     <canvas id="rainBG"></canvas>
 
     <!-- Side Buttons -->
-    <div class="button" id="leftbtn"></div>
-    <div class="button" id="rightbtn">Portfolio</div>
+    <div class="button leftbtn">
+        <span class="leftArrow leftSlide arrow"></span>
+        <span id="leftbtn" class="leftSlide"></span>
+    </div>
+    <div class="button rightbtn">
+        <span id="rightbtn" class="rightSlide"></span>
+        <span class="rightArrow rightSlide arrow"></span>
+    </div>
 
     <!-- Start Grid Container -->
     <div id="gridContainer">
@@ -34,6 +40,7 @@
 
             <!-- Shortcuts -->
             <div id="shortcuts">
+                <span id="quick">Quick Nav</span>
                 <span class="button" id="aboutbtn">About</span>
                 <span class="button" id="portfoliobtn">Portfolio</span>
                 <span class="button" id="contactbtn">Contact Me</span>
@@ -42,13 +49,55 @@
         </div>
 
         <!-- About Me -->
-        <div class="main pos0" id="about" data="About">About</div>
+        <div class="main pos0" id="about" data="About">
+            <h1>About</h1>
+            <p>
+                <image src="assets/images/profile.jpg" id="profile" alt="Me" />
+                <!--FILLER TEXT-->
+                According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too
+                small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't
+                care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh,
+                black and yellow! Let's shake it up a little.
+            </p>
+            <p>
+                Barry! Breakfast is ready! Coming! Hang on a second. Hello? - Barry? - Adam? - Oan you believe this is
+                happening? - I can't. I'll pick you up. Looking sharp. Use the stairs. Your father paid good money for
+                those. Sorry. I'm excited. Here's the graduate. We're very proud of you, son. A perfect report card, all
+                B's. Very proud.
+            </p>
+
+            <!-- Stats -->
+            <div id="statBars">
+                <div class="bar">JavaScript Skill</div><span id="jsXP"></span>
+                <div class="bar">CSS Skill</div><span id="cssXP"></span>
+                <div id="bar">HTML Skill</div><span id="htmlXP"></span>
+            </div>
+        </div>
 
         <!-- Portfolio -->
-        <div class="main pos1" id="portfolio" data="Portfolio">Portfolio</div>
+        <div class="main pos1" id="portfolio" data="Portfolio">
+            <h1>Portfolio</h1>
+        </div>
 
         <!-- Contact -->
-        <div class="main pos2" id="contact" data="Contact Me">Contact</div>
+        <div class="main pos2" id="contact" data="Contact Me">
+            <h1>Contact Me</h1>
+            <form>
+                <label for="name">Name</label>
+                <br>
+                <input type="text" name="name" placeholder="John Smith">
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="text" name="email" placeholder="example@gmail.com">
+                <br>
+                <label for="message">Message</label>
+                <br>
+                <textarea name="message" style="height: 300px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
 
     </div>
 
