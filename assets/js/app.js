@@ -48,6 +48,7 @@ window.onload = function () {
         btnChange(position);
     }
 
+    // Change Buttons
     function btnChange(position) {
         var arr = ['#rightbtn', '#leftbtn'];
         var arr2 = ['right', 'left'];
@@ -66,9 +67,12 @@ window.onload = function () {
             txtChange(arr[1], arr2[1], false, position - 1, 'left');
         }
         $('.button').css('color', 'white');
+        $('.button').css('text-decoration', 'none');
         var btn = "#" + $('.pos' + position).attr("id") + "btn";
         $(btn).css('color', 'rgba(0, 200, 200, 1)');
+        $(btn).css('text-decoration', 'underline');
 
+        // Load Stats on About
         if (position == 0) {
             var x = document.getElementById("about").offsetWidth * 2;
             $("#jsXP").empty();
@@ -89,6 +93,7 @@ window.onload = function () {
 
     }
 
+    // Change Button Text
     function txtChange(name, attr, check, position, dir) {
         var arrow = "<";
         if (dir == 'right') {
@@ -120,10 +125,6 @@ window.onload = function () {
     }
 
     ///////////////STAT BARS///////////////////
-    // var x = document.getElementById("about").offsetWidth * 2;
-    // renderBar(x / 3, "jsXP");
-    // renderBar(x / 4, "cssXP");
-    // renderBar(x / 5, "htmlXP");
 
     function renderBar(max, element) {
         var test = document.getElementById(element);
@@ -154,6 +155,7 @@ window.onload = function () {
             }
         }
     }
+    ///////////////END BARS///////////////////
 
     ////////////// RAIN BG ////////////////////
     // Canvas Variables
@@ -171,7 +173,7 @@ window.onload = function () {
     var g = 255;
     var b = 255;
     var a = 0.2;
-    var speed = 20;
+    var speed = 40;
     var dropLength = height / 10;
     var dropLengthMin = height / 100;
     var dropWidth = 2;

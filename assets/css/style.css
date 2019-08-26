@@ -175,16 +175,18 @@ h1 {
     font-stretch: ultra-condensed;
 }
 
+/* ---------------------MAIN SLIDE BASE----------- */
 .main {
     position: relative;
     grid-area: middle;
     justify-self: center;
-    background: rgba(0, 100, 100, .8);
+    background: rgba(0, 100, 100, .7);
     margin: auto;
     width: 50vw;
     padding: 2rem;
     border-radius: 1rem;
 }
+/* ---------------------MAIN SLIDE BASE----------- */
 
 .pos0 {
     left: 0;
@@ -216,7 +218,6 @@ h1 {
 .reset {
     top: -100%;
 }
-
 /* --------------- ABOUT -------------*/
 #profile {
     display: block;
@@ -239,6 +240,90 @@ h1 {
     line-height: 0;
     height: 1rem;
 }
+
+/* ----------------PORTFOLIO--------- */
+.portfolioGrid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 20rem;
+    grid-column-gap: 1rem;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+.portfolioPic{
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    transition: .2s;
+    box-shadow: .2rem .2rem .1rem gray;
+    border: solid .1rem white;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.portfolioPic:hover .portfolioTooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolioText{
+    position: relative;
+    top: 50%;
+    display: block;
+    width: 100%;
+    background: #433335;
+    border-radius: 1rem;
+}
+
+.portfolioTooltip{
+    position: relative;
+    top: 50%;
+    display: block;
+    grid-column: inherit;
+    visibility: hidden;
+    opacity: 0;
+    background: black;
+    border-radius: 1rem;
+    z-index: 3;
+    padding: 1rem;
+    text-align: left;
+    transition: .5s;
+    text-shadow: gray 0 0 1rem;
+}
+
+#project1{
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url("../images/parallel.png");
+}
+
+#project2{
+    grid-column: 2s;
+    grid-row: 1;
+    background-image: url("../images/trivia.png");
+}
+
+#project3{
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url("../images/gif.png");
+}
+
+a{
+    text-decoration: none;
+    color:#4aaaa5;
+    font-weight: bold;
+}
+
+a:hover{
+    text-shadow: white 0 0 1rem;
+}
+
 /* --------------- CONTACT -------------*/
 input[type=submit]{
     background: #4aaaa5;
@@ -305,7 +390,7 @@ input[type=text], select, textarea{
     }
 
     .main {
-        margin: 1vw 1vw 0 1vw;
+        margin: 1vw 1vw auto 1vw;
         width: 80vw;
         justify-self: center;
     }
